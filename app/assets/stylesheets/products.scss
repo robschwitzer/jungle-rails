@@ -51,6 +51,26 @@ main section.categories-show {
         font-size: 0.8em;
       }
 
+      aside.soldout {
+        position: absolute;
+        height: 7%;
+        width: 23%;
+        top: 0;
+        left: 0;
+        font-size: 0.8em;
+        background: #337ab7;
+        opacity: 0.9;
+        color: #ffadad;
+        padding: 7px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 4px;
+
+        p {
+          display: flex;
+          justify-content: center;
+        }
+      }
+
       &:hover {
 
         border-color: #999;
