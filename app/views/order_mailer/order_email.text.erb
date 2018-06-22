@@ -1,0 +1,17 @@
+
+Welcome to jungle.com.
+===============================================
+
+You have successfully place an order.
+
+Order ID: <%= @order.id %>
+
+<% @items.each do |item| %>
+  <%= item.product.name %>
+<% end %>
+
+Order Total: <%= @order.total_cents %>
+
+To login to the site, just follow this link: <%= @url %>.
+
+Thank you and have a great day!
