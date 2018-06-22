@@ -5,7 +5,7 @@ class OrderMailer < ApplicationMailer
     @order = order
     @items = items
     @url   = "http://jungle.com"
-    mail(to: @order.email, subject: "Thank you for your order")
+    mail(to: @order.email, subject: "Thank you for your order(#{order.id})")
   end
 
 end
