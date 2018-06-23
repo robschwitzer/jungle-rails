@@ -63,6 +63,8 @@ ActiveRecord::Schema.define(version: 20180622234228) do
     t.integer  "rating"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "products_id"
+    t.integer  "users_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -76,4 +78,6 @@ ActiveRecord::Schema.define(version: 20180622234228) do
   add_foreign_key "line_items", "orders"
   add_foreign_key "line_items", "products"
   add_foreign_key "products", "categories"
+  add_foreign_key "reviews", "products"
+  add_foreign_key "reviews", "users"
 end
