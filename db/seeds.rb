@@ -133,4 +133,13 @@ cat3.products.create!({
 })
 
 
+# product1 = Product.find_or_create_by! id: 109
+
+# product1.reviews.create!({
+#   user_id: 1,
+#   description: 'fucking bullshit!',
+#   rating: 1
+#   })
+
+
 puts "DONE!"

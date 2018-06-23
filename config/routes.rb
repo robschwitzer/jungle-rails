@@ -11,7 +11,10 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
 
 
-  resources :products, only: [:index, :show]
+  resources :products, only: [:index, :show] do
+    resources :reviews, only: [:create]
+  end
+
   resources :categories, only: [:show]
 
   resource :cart, only: [:show] do
