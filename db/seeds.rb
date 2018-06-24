@@ -135,7 +135,7 @@ cat3.products.create!({
 User.destroy_all
 
 User.create! ({
-  name: 'bob',
+  name: 'Bob',
   email: 'bobbo@sfgate.com',
   password: '123',
   password_confirmation: '123'
@@ -146,24 +146,17 @@ Review.destroy_all
 Review.create!({
   product_id: 1,
   user_id: 1,
-  description: 'dont like it!',
+  description: "Don't like it!",
   rating: 1
   })
 
 Review.create! ({
   product_id: 2,
   user_id: 1,
-  description: 'p nice i guess',
+  description: "P nice i guess",
   rating: 4
   })
 
-product1 = Product.find_or_create_by! id: 109
-
-product1.reviews.create!({
-  user_id: 1,
-  description: 'fucking bullshit!',
-  rating: 1
-  })
 
 
 puts "DONE!"
