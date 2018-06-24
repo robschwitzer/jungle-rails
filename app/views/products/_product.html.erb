@@ -24,9 +24,15 @@
   </aside>
 
   <% if product.quantity == 0 %>
-  <aside class="soldout">
-    <p>SOLDOUT</p>
-  </aside>
+    <aside class="soldout">
+      <p>SOLDOUT</p>
+    </aside>
+
+
+  <% elsif product.quantity < 3 %>
+    <aside class="almost-gone">
+      <p>ALMOST GONE!</p>
+    </aside>
   <% end %>
 
 </article>
