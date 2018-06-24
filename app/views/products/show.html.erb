@@ -48,7 +48,7 @@
       <section class="reviews-box">
         <h3 style=" margin-left: 120px">Reviews</h3>
         <% if @reviews.count == 0 %>
-          <h5 style="margin-left: 120px">There are currently no reviews for this item... <% if current_user %> Add one above. <% end %></h5>
+          <h5 style="margin-left: 120px">There are currently no reviews for this item...<% if !current_user %> <%= link_to 'Log in ', '/login' %>to add one. <% end %> <% if current_user %> Add one above. <% end %></h5>
         <% end %>
         <% @reviews.reverse.each do |review| %>
           <dl class="dl-horizontal">
