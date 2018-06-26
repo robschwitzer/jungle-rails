@@ -3,11 +3,11 @@ require 'rails_helper'
 RSpec.describe Product, type: :model do
   describe 'Validations' do
     before(:each) do
-      @category = Category.create(name: "new_category")
-      @product = Product.new
-      @product.name = "new_product"
-      @product.price = 1
-      @product.quantity = 1
+      @category            = Category.create(name: "new_category")
+      @product             = Product.new
+      @product.name        = "new_product"
+      @product.price       = 1
+      @product.quantity    = 1
       @product.category_id = @category.id
       @product.valid?
     end
@@ -26,7 +26,7 @@ RSpec.describe Product, type: :model do
       expect(@product.errors.full_messages[0]).to include(@product.errors[:category][0])
     end
 
-    it "should have a price cause ain't shit for free" do
+    it "should have a price" do
       @product.price_cents = nil
       @product.save
       expect(@product.errors.full_messages[0]).to include(@product.errors[:price][0])
