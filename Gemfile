@@ -56,6 +56,9 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'dotenv-rails'
   gem "letter_opener"
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
 end
 
 group :development do
